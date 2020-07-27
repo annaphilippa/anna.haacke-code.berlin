@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block body %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styleears.css')}}"
+    />
+
+    <title>Hands Gallery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="gallery hands">
+      <!-- FOR EVERY IMAGE IN OBJECTS-FOLDER CREATE AN IMAGE -->
+      {% for image in images %}
+      <a href="{{ url_for('static', filename='images/hands/' + image) }}">
+        <img src="{{ url_for('static', filename='images/hands/' + image) }}" />
+      </a>
+      {% endfor %}
+    </div>
+  </body>
+</html>
+{% endblock %}

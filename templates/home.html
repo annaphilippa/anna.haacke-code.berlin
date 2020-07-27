@@ -1,0 +1,62 @@
+{% extends 'base.html' %} {% block body %}
+
+<div> 
+
+
+</div>
+
+
+    <div class="landing"> 
+        <div class= "landingWrapper">
+            <div class="landingL">
+                <h1>ANALOG DIGITAL</h1>
+                <p>Hello, my name is Anna. I’m an Interaction design<br> student &amp; <span class="blue"> hobby artist from Berlin</span>.</p>
+            </div>
+        </div> 
+    </div>
+
+    <div class="WhatIDo">
+        <h2>WHAT I DO:</h2>
+        <p>Adobe Photoshop, -Illustrator, - XD <br>
+                Web development/ design (Python, HTML, CSS, JavaScript)<br>
+                Lots of art (Graphic design, Illustrations, Sketching, Fineart etc)</p>
+    </div>
+
+    <div class="work clearfix">
+        <div class="projectText">
+            <h1>EARS</h1>
+            <a href="/ears"><h5>View Project</h5></a> </a>
+            <div class="underline"></div>
+        </div>
+        <img src="{{ url_for('static', filename='Earsgroup.png')}}" alt="project image" class="ArtImg">
+    </div>
+
+    <div class="work2 clearfix">
+        <div class="projectText">
+            <h1>FACES</h1>
+            <a href="/faces"><h5>View Project</h5></a> </a>
+            <div class="underline"></div>
+        </div>
+        <img src="{{ url_for('static', filename='FacesGroup.png')}}" alt="project image" class="ArtImg">
+    </div>
+
+    <div class="work3 clearfix">
+        <div class="projectText">
+            <h1>HANDS</h1>
+            <a href="/hands"><h5>View Project</h5></a> </a>
+            <div class="underline"></div>
+        </div>
+        <img src="{{ url_for('static', filename='HandsGroup.png')}}" alt="project image" class="ArtImg">
+    </div>
+
+    <div class="work4 clearfix">
+        <div class="projectText">
+            <h1>OBJECTS</h1>
+            <a href="/objects"><h5>View Project</h5></a> </a>
+            <div class="underline"></div>
+        </div>
+        <img src="{{ url_for('static', filename='ThingsGroup.png')}}" alt="project image" class="ArtImg">
+    </div>
+
+    {% endblock %}
+

@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block body %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styleears.css')}}"
+    />
+    <link href="lightbox.min.css" rel="stylesheet" />
+
+    <title>Objects Gallery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="gallery objects">
+      <!-- FOR EVERY IMAGE IN OBJECTS-FOLDER CREATE AN IMAGE -->
+      {% for image in images %}
+      <a href="{{ url_for('static', filename='images/objects/' + image) }}">
+        <img
+          src="{{ url_for('static', filename='images/objects/' + image) }}"
+        />
+      </a>
+      {% endfor %}
+    </div>
+    <script src="lightbox-plus-jquery.min.js"></script>
+  </body>
+</html>
+
+{% endblock %}

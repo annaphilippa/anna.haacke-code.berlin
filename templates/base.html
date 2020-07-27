@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ANALOG DIGITAL</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='./css/main.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/ears">Ears</a></li>
+          <li><a href="/faces">Faces</a></li>
+          <li><a href="/hands">Hands</a></li>
+          <li><a href="/objects">Objects</a></li>
+          <li><a href="/donate">Support me</a></li>
+          <li style="float: right !important;"><a href="/logout">Logout</a></li>
+          <li>
+            <a href="https://www.instagram.com/annalog_digital/">Instagram</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div style="padding: 20px;">
+      {% block body %} {% endblock %}
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <center>
+        <a href="https://www.instagram.com/annalog_digital/">
+          <h3 class="blue">More on Instagram</h3>
+          <img
+            src="{{ url_for('static', filename='insta1.jpeg')}}"
+            width="50px"
+            height="50px"
+            style="margin: 5px;"
+          />
+        </a>
+        <div class="underlinSmall"></div>
+      </center>
+    </footer>
+  </body>
+</html>

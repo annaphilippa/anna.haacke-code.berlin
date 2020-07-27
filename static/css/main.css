@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #bbbbd5;
+  cursor: pointer;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #47223f;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(252, 182, 231);
+  color: rgb(126, 22, 117);
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.WhatIDo {
+  text-align: center;
+  margin-bottom: 20em;
+}
+
+.WhatIDo p {
+  margin-bottom: 30px;
+}
+
+.work {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20em;
+}
+
+.work > .projectText {
+  position: absolute;
+  top: 85px;
+}
+
+.work > .projectText > .underline {
+  display: block;
+  background-color: #191970;
+  height: 3px;
+  width: 61px;
+  margin-top: 5px;
+}
+
+.work > .ArtImg {
+  width: 85%;
+  float: right;
+  -webkit-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  -moz-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+}
+
+.work2 {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20em;
+}
+
+.work2 > .projectText {
+  position: absolute;
+  top: 85px;
+  right: 0;
+  text-align: right;
+}
+
+.work2 > .projectText > .underline {
+  display: block;
+  background-color: #191970;
+  height: 3px;
+  width: 61px;
+  margin-top: 5px;
+  float: right;
+}
+
+.work2 > .ArtImg {
+  width: 85%;
+  float: left;
+  -webkit-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  -moz-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+}
+
+.work3 {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20em;
+}
+
+.work3 > .projectText {
+  position: absolute;
+  top: 85px;
+}
+
+.work3 > .projectText > .underline {
+  display: block;
+  background-color: #191970;
+  height: 3px;
+  width: 61px;
+  margin-top: 5px;
+}
+
+.work3 > .ArtImg {
+  width: 85%;
+  float: right;
+  -webkit-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  -moz-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+}
+
+.work4 {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20em;
+}
+
+.work4 > .projectText {
+  position: absolute;
+  top: 85px;
+  right: 0;
+  text-align: right;
+}
+
+.work4 > .projectText > .underline {
+  display: block;
+  background-color: #191970;
+  height: 3px;
+  width: 61px;
+  margin-top: 5px;
+  float: right;
+}
+
+.work4 > .ArtImg {
+  width: 85%;
+  float: left;
+  -webkit-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  -moz-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+}
+
+.work a,
+.work2 a,
+.work3 a,
+.work4 a {
+  text-decoration: none;
+  color: #17191a;
+}
+
+footer {
+  /* background-image: url(instaLogo2.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 600px;
+  padding-bottom: 7em;
+  text-align: center;
+  bottom: 0; */
+  width: 100vw;
+  height: 50px;
+  background-color: #bbbbd5;
+  padding: 2%;
+  text-decoration: none;
+  position: relative;
+  bottom: 0;
+}
+
+footer a {
+  color: #191970;
+  text-decoration: none;
+}
+
+.underlineSmall {
+  display: block;
+  height: 3px;
+  width: 41px;
+  margin: 5px auto 0 auto;
+  background-color: #191970;
+}

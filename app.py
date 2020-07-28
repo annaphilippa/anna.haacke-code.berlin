@@ -65,24 +65,23 @@ def donate():
 @app.route('/login', methods=["GET","POST"])
 def do_admin_login():
     if request.method == "POST":
-        try:
 
-            POST_USERNAME = request.form['username']
-            POST_PASSWORD = request.form['password']
+        POST_USERNAME = request.form['username']
+        POST_PASSWORD = request.form['password']
 
-            con = sql.connect("users.db")
-            cursor = con.cursor()
-            query = "SELECT password FROM  users WHERE username='{}' ".format(POST_USERNAME)
-            cursor.execute(query)
-            password = cursor.fetchall(); 
-        
-            if str(password[0]) == "('"+POST_PASSWORD+"',)":
-                session['username'] = 'adam'
-                return render_template('home.html')
-            else: 
-                return render_template('login.html', text="Username or Password wrong! Please try again.")
-        except:
-                return render_template('login.html', text="Username or Password wrong! Please try again.")
+        con = sql.connect("users.db")
+        cursor = con.cursor()
+
+        query = f"SELECT username FROM users WHERE username='{POST_USERNAME}' and password='{POST_PASSWORD}'"
+        cursor.execute(query)
+        user = cursor.fetchone()
+
+        if user is not None:
+            session['username'] = user[0]
+            return render_template('home.html')
+        else: 
+            return render_template('login.html', text="Username or Password wrong! Please try again.")
+
 
     else:
         return render_template('login.html',text="Please Login to see my Gallery")

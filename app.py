@@ -1,15 +1,15 @@
-from flask import Flask
-from flask import Flask, redirect, render_template, request, session
+from flask import Flask, redirect, render_template, request, session, url_for
 import os
 import sqlite3 as sql
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'tO8U0V8ZVcVn6tAOT5I3dCgNqTaiJ5Y0yO16trmy8i5PAyzsJi'
 
 @app.route('/')
 def home():
     if 'username' in session:
         username = session['username']
+        return render_template('home.html')
         
     else:
         return render_template('login.html', text="Please Login to see my Gallery")
@@ -78,7 +78,7 @@ def do_admin_login():
 
         if user is not None:
             session['username'] = user[0]
-            return render_template('home.html')
+            return redirect(url_for('home'))
         else: 
             return render_template('login.html', text="Username or Password wrong! Please try again.")
 
